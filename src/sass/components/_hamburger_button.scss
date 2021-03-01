@@ -3,12 +3,11 @@
   height: 3px;
   background-color: white;
   position: absolute;
-  background-color: $sidebar-background-color; //TODO zamienieć kolory pod sidebar
+  background-color: $sidebar-background-color;
 }
 
 .hamburger {
   padding: 10px;
-  // display: inline-block; TODO do usunięcie
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -17,8 +16,8 @@
   z-index: 2;
 
   &__box {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     position: relative;
   }
@@ -65,6 +64,7 @@
 }
 
 .hamburger--active .hamburger__inner::before {
+  background-color: white;
   transform: translateY(10px) rotate(45deg);
   -webkit-transform: translateY(10px) rotate(45deg);
   -moz-transform: translateY(10px) rotate(45deg);
@@ -73,6 +73,7 @@
 }
 
 .hamburger--active .hamburger__inner::after {
+  background-color: white;
   transform: translateY(-10px) rotate(-45deg);
   -webkit-transform: translateY(-10px) rotate(-45deg);
   -moz-transform: translateY(-10px) rotate(-45deg);
