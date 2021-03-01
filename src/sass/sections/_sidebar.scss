@@ -1,0 +1,42 @@
+// sidebar
+#sidebar-wrapper {
+  // padding-top: 70px;
+  z-index: 1;
+  background-color: $sidebar-background-color;
+  position: absolute;
+  width: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  border: 2px solid red;
+  opacity: 0.9;
+  left: 0;
+  transition: transform .3s .3s ease-in-out;
+  -webkit-transition: transform .3s .3s ease-in-out;
+  -moz-transition: transform .3s .3s ease-in-out;
+  -ms-transition: transform .3s .3s ease-in-out;
+  -o-transition: transform .3s .3s ease-in-out;
+}
+
+#wrapper.menuDisplayed #sidebar-wrapper {
+  width: 250px;
+}
+
+.sidebar-nav {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 50px;
+}
+
+.sidebar-nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-nav li a:hover {
+  background: blue;
+}

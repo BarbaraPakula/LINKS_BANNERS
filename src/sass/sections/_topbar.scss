@@ -1,0 +1,29 @@
+#topbar-wrapper {
+  width: 100%;
+  // position: absolute;
+  padding: 15px;
+  border: 5px solid green;
+}
+
+#wrapper.menuDisplayed #topbar-wrapper {
+  padding-left: 250px;
+}
+
+.topbar-nav {
+  padding: 0;
+  list-style: none;
+}
+
+.topbar-nav li {
+  text-indent: 20px;
+  line-height: 50px;
+}
+
+.topbar-nav li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.topbar-nav li a:hover {
+  background: blue;
+}

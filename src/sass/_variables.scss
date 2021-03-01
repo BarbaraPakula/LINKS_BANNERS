@@ -1,12 +1,23 @@
 // tutaj będziemy definiować wszystkie zmienne dotyczące projektu takie jak kolory, wielkości, czcionki oraz inne standaryzacje,
-
+//TOOD ustawić główne kolory, trzcionki formaty
 /* Colors */
-$paragraph-color: #000000;
-$brand-main-color: #ff0000;
+$sidebar-background-color: #000000;
+$sidebar-background-color1: #020007;
+$buttons-color: #ff742e;
+$brand-2-color: #5ac6da;
+$brand-3-color: #279b4d;
+$font-color: #8c8f8d;
+$icon-color: #f8f9fa;
+$sidebar-font-color: #ffffff;
+$background-basic-color: #ebebeb;
 
 /* Font sizes */
-$paragraph-font-size: 16px;
+$paragraph-font-size:16px;
+$header-font-size: 48px;
 
 /* Fonts */
-$brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;
+$brand-font: "Open Sans",Helvetica,Arial;
+$paragraph-font: "Open Sans",Helvetica,Arial;
+
+$main-font: 'Playfair Display', Serif;
+$header-font: 'Source Sans Pro', Sans-Serif;
