@@ -24,11 +24,11 @@
   padding: 6px 10px;
   border-left: 2px solid $background-basic-color;
 }
-.topbar-nav img{
+
+.topbar-nav img {
   margin: 0 5px;
 }
 
-
 .topbar-nav a:hover {
-  background: blue;
+  background-color: $background-basic-color;
 }
