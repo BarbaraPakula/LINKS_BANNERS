@@ -44,15 +44,15 @@
     padding: 20px 30%;
 
     .description_1 {
-      @include description($background-basic-color)
+      @include description($background-basic-color);
     }
 
     .description_2 {
-      @include description($background-basic-color)
+      @include description($background-basic-color);
     }
 
     .description_3 {
-      @include description($background-basic-color)
+      @include description($background-basic-color);
     }
 
     .circle_1 {
@@ -67,10 +67,7 @@
       @include circle($brand-3-color);
     }
   }
-
 }
-
-
 
 .chart_wrapper {
   display: flex;
