@@ -1,0 +1,81 @@
+.general_statistic {
+  .dates_form_wrraper {
+    padding: 20px 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // .date_picker {}
+    //TODO usunąć jak nie będzie używane
+
+    input[type=date][id=select] {
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+
+    input[type=date][id=pick] {
+      &::-webkit-calendar-picker-indicator {
+        background-image: url(../../images/icons/calendar.svg);
+      }
+    }
+  }
+}
+
+.table_wrapper {
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 20%;
+
+  .table {
+    margin-left: 20px;
+    flex: 35%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $background-basic-color;
+    padding: 10px;
+  }
+}
+
+.chart_statistic_wrapper {
+  .circle_wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30%;
+
+    .description_1 {
+      @include description($background-basic-color)
+    }
+
+    .description_2 {
+      @include description($background-basic-color)
+    }
+
+    .description_3 {
+      @include description($background-basic-color)
+    }
+
+    .circle_1 {
+      @include circle($brand-2-color);
+    }
+
+    .circle_2 {
+      @include circle($buttons-color);
+    }
+
+    .circle_3 {
+      @include circle($brand-3-color);
+    }
+  }
+
+}
+
+
+
+.chart_wrapper {
+  display: flex;
+
+  img {
+    width: 100%;
+  }
+}

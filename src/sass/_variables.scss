@@ -12,12 +12,14 @@ $sidebar-font-color: #ffffff;
 $background-basic-color: #ebebeb;
 
 /* Font sizes */
-$paragraph-font-size:16px;
-$header-font-size: 48px;
+$paragraph-font-size:10px;
 
 /* Fonts */
-$brand-font: "Open Sans",Helvetica,Arial;
-$paragraph-font: "Open Sans",Helvetica,Arial;
+$brand-font: "Open Sans",Helvetica,Arial, Serif;
+$paragraph-font: "Open Sans",Helvetica,Arial, Sans-Serif;
+
+$main-font: 'Playfair Display', Serif;
+$header-font: 'Source Sans Pro', Sans-Serif;
 
 $main-font: 'Playfair Display', Serif;
 $header-font: 'Source Sans Pro', Sans-Serif;

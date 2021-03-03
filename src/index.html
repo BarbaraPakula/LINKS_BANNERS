@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i%7cSource+Sans+Pro" rel="stylesheet">
   <title>Links&Banners Panel</title>
   <link rel="stylesheet" href="./vendor/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -45,9 +46,14 @@
           <img src="./images/icons/postback.svg" alt="icon" class="icon">
           Postback</a>
         <hr>
-        <div class="photo">
-          <p>YOUR MANAGER </p><img src="./images/chart.png" alt="" class="photo__manager">
-          <p>Jem Curry</p>
+        <div id="manager_box">
+          <p>YOUR MANAGER </p>
+          <div class="photo">
+            <img src="./images/chart.png" alt="" class="photo__manager">
+            <div>
+              <p>Jem Curry</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -55,15 +61,12 @@
     <div id="topbar-wrapper">
       <div class="container-fluid">
         <div class="topbar-nav">
-          <a href="#"> <img src="./images/icons/wallet.svg" alt="" class="icon"><span>1200</span>
+          <a href="#"> <img src="./images/icons/wallet.svg" alt="" class="icon">$1,500.00
             <img src="./images/icons/arrow-down.svg" alt="" class="icon"></a>
-          <a href="#"> <img src="./images/icons/notification.svg" alt="" class="icon"></a>
-          <a href="#"> <img src="./images/icons/profile.svg" alt="" class="icon"><span>Leonardo Di Carpatka</span></a>
+          <a href="#" id="kropka"> <img src="./images/icons/notification.svg" alt="" class="icon"> </a>
+          <a href="#"> <img src="./images/icons/profile.svg" alt="" class="icon">Leonardo Di Carpatka</a>
           <a href="#"> <img src="./images/icons/quit.svg" alt="" class="icon"></a>
         </div>
-
-
-
       </div>
 
     </div>
@@ -75,6 +78,51 @@
           <div class="section_header">
             <h1>General statistic</h1>
           </div>
+          <div class="dates_form_wrraper">
+            <input type="date" id="select" class="date_picker">
+            <input type="date" id="pick" class="date_picker">
+            <button class="button__refresh"><img src="./images/icons/refresh.svg" alt="" class="icon"></button>
+          </div>
+          <div class="table_wrapper">
+            <div class="table">
+              <h3>Visit Signups</h3>
+              <p>124</p>
+            </div>
+            <div class="table">
+              <h3>Net Deposit</h3>
+              <p>564</p>
+            </div>
+            <div class="table">
+              <h3>FTD</h3>445
+            </div>
+            <div class="table">
+              <h3>Turn Over</h3>
+              <p>432</p>
+            </div>
+
+          </div>
+          <div class="chart_statistic_wrapper">
+            <h3>Earning chart</h3>
+
+
+            <div class="circle_wrapper">
+              <div class="description_1">
+                <div class="circle_1"></div>
+                <p>Signups</p>
+              </div>
+              <div class="description_2">
+                <div class="circle_2"></div>
+                <p>FTD</p>
+              </div>
+              <div class="description_3">
+                <div class="circle_3"></div>
+                <p>Earned</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="chart_wrapper"><img src="./images/chart.png" alt="chart_general statistic"></div>
+
         </div>
       </section>
       <!-- links section -->
@@ -83,7 +131,6 @@
           <div class="section_header">
             <h1>Links</h1>
           </div>
-
           <div class="links__wrapper">
             <button type="submit" class="button__orange">+ add new</button>
             <div class="link">
