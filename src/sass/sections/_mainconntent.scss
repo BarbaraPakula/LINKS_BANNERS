@@ -1,14 +1,9 @@
-#page-conntent-wrapper {
-  position: absolute;
+#page-content-wrapper {
   padding-top: 43px;
+  padding-left: 200px; //TODO displayd 
 }
 
-.container-fluid {
-  background: $icon-color;
-  margin-bottom: 5px;
-}
-
-#wrapper.menuDisplayed #page-conntent-wrapper {
-  padding-left: 200px;
+#wrapper.menuDisplayed #page-content-wrapper {
+  padding-left: 35px;
 }
 

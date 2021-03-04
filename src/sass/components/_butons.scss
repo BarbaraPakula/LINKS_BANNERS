@@ -1,7 +1,7 @@
 @mixin button {
   background-color: $buttons-color;
   border: none;
-  height: 35px;
+  height: 30px;
   color: $sidebar-font-color;
   border-radius: 4%;
   display: flex;
@@ -23,7 +23,9 @@
 .button__refresh {
   @include button;
   margin-left: 2px;
-  min-width: 40px;
+  min-width: 30px;
+  flex-basis: 1;
+  flex-shrink: 10;
 }
 
 .button__refresh:hover {

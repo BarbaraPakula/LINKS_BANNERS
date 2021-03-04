@@ -4,15 +4,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: $font-color;
+
 }
 
 body {
   background-color: $background-basic-color;
   font-family: $paragraph-font;
   font-size: $paragraph-font-size;
+  color: $font-color;
+
 }
 
 #wrapper {
-  padding: 0 10px;
+  padding-left: 6px;
+  padding-right: 10px;
+}
+
+a {
+  color: $font-color;
 }

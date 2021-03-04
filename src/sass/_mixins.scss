@@ -23,3 +23,23 @@
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
 }
+
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@include tablet {
+  padding-left: 100px;
+}

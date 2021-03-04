@@ -1,11 +1,13 @@
 .general_statistic {
+  background: $icon-color;
+  padding-bottom: 20px;
+
   .dates_form_wrraper {
+
     padding: 20px 20%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // .date_picker {}
-    //TODO usunąć jak nie będzie używane
 
     input[type=date][id=select] {
       &::-webkit-calendar-picker-indicator {
@@ -23,7 +25,6 @@
 
 .table_wrapper {
   display: flex;
-  // justify-content: center;
   flex-wrap: wrap;
   padding: 10px 20%;
 
@@ -40,7 +41,7 @@
 .chart_statistic_wrapper {
   .circle_wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 30%;
 
     .description_1 {

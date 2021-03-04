@@ -7,7 +7,8 @@
 
 .hamburger {
   outline-style: none;
-  padding: 10px;
+  padding-left: 160px;
+  padding-top: 5px;
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -16,8 +17,8 @@
   z-index: 2;
 
   &__box {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     position: relative;
   }
@@ -59,37 +60,18 @@
   top: 10px;
 }
 
-.hamburger--active .hamburger__inner {
-  background-color: transparent;
-}
-
 .hamburger--active .hamburger__inner::before {
   background-color: $font-color;
-  transform: translateY(10px) rotate(45deg);
-  -webkit-transform: translateY(10px) rotate(45deg);
-  -moz-transform: translateY(10px) rotate(45deg);
-  -ms-transform: translateY(10px) rotate(45deg);
-  -o-transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger--active .hamburger__inner::after {
   background-color: $font-color;
-  transform: translateY(-10px) rotate(-45deg);
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-  -moz-transform: translateY(-10px) rotate(-45deg);
-  -ms-transform: translateY(-10px) rotate(-45deg);
-  -o-transform: translateY(-10px) rotate(-45deg);
 }
 
 .hamburger--active {
-  transform: translateX(180px);
-  transition: transform .3s .3s ease-in-out;
-  -webkit-transition: transform .3s .3s ease-in-out;
-  -moz-transition: transform .3s .3s ease-in-out;
-  -ms-transition: transform .3s .3s ease-in-out;
-  -o-transition: transform .3s .3s ease-in-out;
-  -webkit-transform: translateX(140px);
-  -moz-transform: translateX(180px);
-  -ms-transform: translateX(180px);
-  -o-transform: translateX(180px);
+  transform: translateX(-165px);
+  -webkit-transform: translateX(-165px);
+  -moz-transform: translateX(-165px);
+  -ms-transform: translateX(-165px);
+  -o-transform: translateX(-165px);
 }
