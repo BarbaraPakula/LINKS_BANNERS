@@ -27,13 +27,13 @@
     <div id="sidebar-wrapper">
       <div class="sidebar-nav">
         <a href="#"><span>Just do it</span></a>
-        <a href="#"><img src="./images/icons/general.svg" class="icon" alt="icon">
+        <a href="#general" class="active"><img src="./images/icons/general.svg" class="icon" alt="icon">
           <span>General</span></a>
 
-        <a href="#">
+        <a href="#details">
           <img class="icon" src="./images/icons/details.svg" alt="icon">
           <span>Details</span></a>
-        <a href="#">
+        <a href="#links">
           <img src="./images/icons/linksblack.svg" class="icon" alt="icon">
           <span>Links</span></a>
         <a href="#">
@@ -71,7 +71,7 @@
     <!-- main content -->
     <div id="page-content-wrapper">
       <!-- general statistic -->
-      <section class="general_statistic">
+      <section class="general_statistic active" id="general">
         <div class="section_header">
           <h1>General statistic</h1>
         </div>
@@ -119,12 +119,12 @@
         <div class="chart_wrapper"><img src="./images/chart.png" alt="chart_general statistic"></div>
       </section>
       <!-- links section -->
-      <section class="links">
+      <section class="links" id="links">
         <div class="section_header">
           <h1>Links</h1>
         </div>
         <div class="links__wrapper">
-       
+
           <button type="submit" class="button__orange">+ add new</button>
           <div class="link_wrapper">
             <h3>Home page</h3>
@@ -211,15 +211,7 @@
       </section>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-  <script>
-    $("#menu-toggle").click(function (e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("menuDisplayed")
-    });
-
-  </script>
   <script src="./js/script.js"></script>
 
 </body>
