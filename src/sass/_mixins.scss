@@ -3,6 +3,7 @@
   width: 50px;
   height: 18px;
   font-size: 10px;
+  margin: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,6 +29,12 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
@@ -38,8 +45,4 @@ $desktop-width: 1024px;
   @media (min-width: #{$desktop-width}) {
     @content;
   }
-}
-
-@include tablet {
-  padding-left: 100px;
 }

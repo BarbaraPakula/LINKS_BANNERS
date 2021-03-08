@@ -26,6 +26,10 @@
   min-width: 30px;
   flex-basis: 1;
   flex-shrink: 10;
+
+  @include mobile {
+    max-width: 10px;
+  }
 }
 
 .button__refresh:hover {

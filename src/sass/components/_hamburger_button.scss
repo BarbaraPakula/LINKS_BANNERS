@@ -16,6 +16,10 @@
   position: fixed;
   z-index: 2;
 
+  @include mobile {
+    padding-left: 90px;
+  }
+
   &__box {
     width: 20px;
     height: 20px;
@@ -70,8 +74,13 @@
 
 .hamburger--active {
   transform: translateX(-160px);
-  -webkit-transform: translateX(-160px);
-  -moz-transform: translateX(-160px);
-  -ms-transform: translateX(-160px);
-  -o-transform: translateX(-160px);
+
+  @include mobile {
+    transform: translateX(-90px);
+    -webkit-transform: translateX(-90px);
+    -moz-transform: translateX(-90px);
+    -ms-transform: translateX(-90px);
+    -o-transform: translateX(-90px);
+  }
+
 }

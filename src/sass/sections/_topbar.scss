@@ -16,6 +16,11 @@
     padding: 6px 10px;
     border-left: 2px solid $background-basic-color;
   }
+
+  @include mobile {
+    display: none;
+  }
+
 }
 
 a:hover {
@@ -33,6 +38,6 @@ a#kropka::after {
   border-radius: 50%;
   background: $brand-3-color;
   position: absolute;
-  left: 55%;
+  left: 18px;
   z-index: 100;
 }

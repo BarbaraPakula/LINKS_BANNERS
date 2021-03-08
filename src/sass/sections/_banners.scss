@@ -1,5 +1,5 @@
-.links {
-  background: $sidebar-font-color;
+.banners {
+  background: $icon-color;
   margin-top: 5px;
 
   &__wrapper {
@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: $sidebar-font-color;
+    background: $icon-color;
   }
 
   .link_wrapper {

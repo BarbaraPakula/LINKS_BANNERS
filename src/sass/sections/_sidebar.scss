@@ -1,6 +1,7 @@
 #sidebar-wrapper {
   z-index: 1;
-  background-color: $sidebar-background-color;
+  // background-color: $sidebar-background-color;
+  background-color: rgb(59, 57, 57);
   position: fixed;
   width: 200px;
   height: 100vh;
@@ -11,6 +12,42 @@
   -moz-transition: transform .5s .5s ease-in-out;
   -ms-transition: transform .5s .5s ease-in-out;
   -o-transition: transform .5s .5s ease-in-out;
+
+  a:nth-child(10) {
+    display: none;
+  }
+
+  a:nth-child(11) {
+    display: none;
+  }
+
+  a:nth-child(12) {
+    display: none;
+  }
+
+  a:nth-child(13) {
+    display: none;
+  }
+
+  @include mobile {
+    width: 130px;
+
+    a:nth-child(10) {
+      display: flex;
+    }
+
+    a:nth-child(11) {
+      display: flex;
+    }
+
+    a:nth-child(12) {
+      display: flex;
+    }
+
+    a:nth-child(13) {
+      display: flex;
+    }
+  }
 }
 
 #wrapper.menuDisplayed #sidebar-wrapper {
@@ -33,7 +70,43 @@
   #manager_box {
     display: none;
   }
+
+  a:nth-child(10) {
+    display: none;
+  }
+
+  a:nth-child(11) {
+    display: none;
+  }
+
+  a:nth-child(12) {
+    display: none;
+  }
+
+  a:nth-child(13) {
+    display: none;
+  }
+
+  @include mobile {
+    a:nth-child(10) {
+      display: flex;
+    }
+
+    a:nth-child(11) {
+      display: flex;
+    }
+
+    a:nth-child(12) {
+      display: flex;
+    }
+
+    a:nth-child(13) {
+      display: flex;
+    }
+  }
+
 }
+
 
 .sidebar-nav {
   padding-left: 5px;
@@ -41,7 +114,7 @@
 
 
 .sidebar-nav a {
-  line-height: 5;
+  padding: 14px 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -95,8 +168,8 @@ div.photo::after {
   border-radius: 50%;
   background: $brand-3-color;
   position: absolute;
-  left: 15%;
-  top: 8%;
+  left: 25px;
+  top: 3px;
   z-index: 100;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
