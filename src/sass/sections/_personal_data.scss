@@ -5,6 +5,16 @@
     align-items: center;
     padding: 20px;
     background: $sidebar-font-color;
+    color: $font-color;
+
+    input {
+      border: 1px solid $background-basic-color;
+    }
+
+    input:focus {
+      background-color: $background-basic-color;
+      outline-color: $buttons-color;
+    }
   }
 
   &_wrapper {

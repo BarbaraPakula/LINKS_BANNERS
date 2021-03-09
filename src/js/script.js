@@ -21,7 +21,7 @@ const navLinks = document.querySelectorAll('#sidebar-wrapper a');
 
 function initPages() {
   const idFromHash = window.location.hash.replace('#/', ' ');
-  let pageMatchingHash = pages[3].id;
+  let pageMatchingHash = pages[0].id;
 
   for (let page of pages) {
     if (page.id == idFromHash) {

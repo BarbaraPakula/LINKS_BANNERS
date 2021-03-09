@@ -9,13 +9,13 @@
     display: flex;
     justify-content: center;
 
-    input[type=date][id=select] {
+    input[type=date][class=select] {
       &::-webkit-calendar-picker-indicator {
         display: none;
       }
     }
 
-    input[type=date][id=pick] {
+    input[type=date][class=pick] {
       &::-webkit-calendar-picker-indicator {
         background-image: url(../../images/icons/calendar.svg);
       }
