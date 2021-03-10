@@ -34,16 +34,13 @@
       </div>
     </div>
   </div>
-
   <!-- hamburger -->
   <button class="hamburger" id="menu-toggle">
     <span class="hamburger__box">
       <span class="hamburger__inner"></span>
     </span>
   </button>
-
   <div id="wrapper">
-
     <!-- sidebar -->
     <div id="sidebar-wrapper">
       <div class="sidebar-nav">
@@ -127,7 +124,7 @@
         </div>
         <div class="chart_statistic_wrapper">
           <h3>Earning chart</h3>
-          <div class="circle_wrapper">
+          <!-- <div class="circle_wrapper">
             <div class="description_1">
               <div class="circle_1"></div>
               <p>Signups</p>
@@ -140,10 +137,11 @@
               <div class="circle_3"></div>
               <p>Earned</p>
             </div>
-          </div>
-
+          </div> -->
         </div>
-        <div class="chart_wrapper"><img src="images/chart.png" alt="chart"></div>
+        <!-- <div class="chart_wrapper"><img src="images/chart.png" alt="chart"></div> -->
+
+        <canvas id="myChart"></canvas>
       </section>
       <!-- details -->
       <section class="details" id="details">
@@ -623,7 +621,7 @@
 
     </div>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="./js/script.js"></script>
 
 </body>
