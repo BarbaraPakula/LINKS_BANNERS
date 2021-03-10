@@ -14,22 +14,42 @@
 </head>
 
 <body>
+  <!-- modals-->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="quit_icon">
+      <div class="btn-close js--close-modal">x</div>
+      <h4>Do you really want to Quit? </h4>
+      <button class="js--close-modal">Cancel</button>
+      <button class="js--close-modal">Quit</button>
+    </div>
+    <div class="modal" id="icon-profile">
+      <div class="btn-close js--close-modal">x</div>
+      <div class="section_header">
+        <h3>Login</h3>
+      </div>
+      <div class="modal_wrapper">
+        <input type=text placeholder="login name">
+        <input type=password placeholder="password">
+        <button class="js--close-modal button__orange">Enter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- hamburger -->
+  <button class="hamburger" id="menu-toggle">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
 
   <div id="wrapper">
-    <!-- hamburger -->
-    <button class="hamburger" id="menu-toggle">
-      <span class="hamburger__box">
-        <span class="hamburger__inner"></span>
-      </span>
-    </button>
 
     <!-- sidebar -->
     <div id="sidebar-wrapper">
       <div class="sidebar-nav">
-        <a href="#"><span>Just do it</span></a>
+        <a href="#general"><span>Just do it</span></a>
         <a href="#general" class="active"><i class="icon-general icon"></i>
           <span>General</span></a>
-
         <a href="#details">
           <i class="icon-details icon"></i>
           <span>Details</span></a>
@@ -42,18 +62,19 @@
         <a href="personal_data">
           <i class="icon-personaldata icon"></i>
           <span>Personal data</span></a>
-        <a href="#">
+        <a href="#payout">
           <i class="icon-payout icon"></i>
           <span>Payout</span></a>
-        <a href="#">
+        <a href="postback">
           <i class="icon-postback icon"></i>
           <span>Postback</span></a>
         <hr>
         <a href="#"> <i class="icon-wallet icon"></i><span>$1,500.00
             <i class="icon-arrow-down-small icon"></i></span></a>
         <a href="#"> <i class="icon-notification icon"></i> </a>
-        <a href="#"> <i class="icon-profile icon"></i><span>Leonardo Di Carpatka</span></a>
-        <a href="#"> <i class="icon-quit icon"></i></a>
+        <a href="#general" class="icon-profile icon"><span>Leonardo Di Carprio <i
+              class="icon-arrow-down-small"></i></span></a>
+        <a href="#general" class="icon-quit icon"></a>
         <hr>
         <div id="manager_box">
           <p>YOUR MANAGER </p>
@@ -71,8 +92,8 @@
       <a href="#"> <i class="icon-wallet icon"></i>$1,500.00
         <i class="icon-arrow-down-small icon"></i></a>
       <a href="#" id="kropka"> <i class="icon-notification icon"></i> </a>
-      <a href="#"> <i class="icon-arrow-down-small icon"></i>Leonardo Di Carpatka</a>
-      <a href="#"> <i class="icon-quit icon"></i></a>
+      <a href="#" class="icon-profile">Leonardo Di Carpatka <i class="icon-arrow-down-small"></i></a>
+      <a href="#" class="icon-quit"></a>
     </div>
     <!-- main content -->
     <div id="page-content-wrapper">
@@ -123,6 +144,143 @@
 
         </div>
         <div class="chart_wrapper"><img src="images/chart.png" alt="chart"></div>
+      </section>
+      <!-- details -->
+      <section class="details" id="details">
+        <div class="section_header">
+          <h1>Details</h1>
+        </div>
+        <div class="details__wrapper">
+          <div class="dates_form_wrraper">
+            <input type="date" class="select">
+            <input type="date" class="pick">
+            <button class="button__refresh"><i class="icon-refresh icon"></i></button>
+          </div>
+          <div class="scroll-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tracker name</th>
+                  <th>Initialed date</th>
+                  <th>Visit</th>
+                  <th>Unique</th>
+                  <th>Signups</th>
+                  <th>FTD</th>
+                  <th>Depositors</th>
+                  <th>Deposits($)</th>
+                  <th>Payouts($)</th>
+                  <th>Turnover</th>
+                  <th>Deal</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
       <!-- links section -->
       <section class="links" id="links">
@@ -310,7 +468,7 @@
               </div>
               <div class="field">
                 <label>Repeat</label>
-                <input type="text" name="Repeat">
+                <input type="password" name="Repeat">
               </div>
             </div>
             <button class="button__orange" type="submit">Save</button>
@@ -319,10 +477,10 @@
 
 
       </section>
-      <!-- personal details -->
-      <section class="details" id="details">
+      <!-- Payout -->
+      <section class="details" id="payout">
         <div class="section_header">
-          <h1>Details</h1>
+          <h1>Payout</h1>
         </div>
         <div class="details__wrapper">
           <div class="dates_form_wrraper">
@@ -456,6 +614,13 @@
           </div>
         </div>
       </section>
+      <!-- Section Postback -->
+      <section class="details" id="postback">
+        <div class="section_header">
+          <h1>Postback</h1>
+        </div>
+      </section>
+
     </div>
   </div>
 

@@ -38,7 +38,6 @@ function initPages() {
       e.preventDefault();
       //       // wydobyć id z atrybutu href
       const id = clicedElement.getAttribute('href').replace('#', '');
-      console.log('id:', id);
       //       // wywołać met z apge z tym id
       activatePage(id);
       //       // ?? change url hash
@@ -58,3 +57,56 @@ function activatePage(pageId) {
 }
 activatePage();
 initPages();
+
+
+
+// /* modal */
+// prostej funkcji, która zamknie modal poprzez usunięcie klasy show z overlaya.
+function closeModal() {
+  document.getElementById('overlay').classList.remove('show');
+}
+//Następnie podpinamy ją pod przyciski zamykające z klasą js--close-modal:
+document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeModal();
+  });
+});
+// zamykanie modala po kliknięciu w tło overlaya.
+document.querySelector('#overlay').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+//zamykanie na klawiaturze
+document.addEventListener('keyup', function (e) {
+  if (e.keyCode === 27) {
+    closeModal();
+  }
+});
+
+//otwieranie modala
+
+function openModal(modal) {
+  document.querySelectorAll('#overlay > *').forEach(function (modal) {
+    modal.classList.remove('show');
+  });
+  document.querySelector('#overlay').classList.add('show');
+  document.querySelector(modal).classList.add('show');
+}
+console.log(document.querySelectorAll('.icon-profile'));
+
+const icon_quit = document.querySelectorAll('.icon-quit ');
+for (let quit of icon_quit) {
+  quit.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal('#quit_icon');
+  });
+}
+const icon_profile = document.querySelectorAll('.icon-profile');
+for (let quit of icon_profile) {
+  quit.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal('#icon-profile');
+  });
+}

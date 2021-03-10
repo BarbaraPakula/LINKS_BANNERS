@@ -25,6 +25,10 @@
 
 a:hover {
   background-color: $background-basic-color;
+
+  i {
+    color: $buttons-color;
+  }
 }
 
 #kropka {

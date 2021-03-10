@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 body {
@@ -12,7 +11,6 @@ body {
   font-family: $paragraph-font;
   font-size: $paragraph-font-size;
   color: $font-color;
-
 }
 
 #wrapper {
@@ -24,3 +22,71 @@ a {
   color: $font-color;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+
+  .section_header {
+    background: $sidebar-font-color;
+    border-bottom: 1px solid $font-color;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+
+  .modal_wrapper {
+    padding: 10%;
+    display: flex;
+    justify-content: space-around;
+
+    .modal_wrapper>buttons {
+      background-color: $buttons-color;
+      padding: 5px;
+      margin: 10px;
+    }
+  }
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
