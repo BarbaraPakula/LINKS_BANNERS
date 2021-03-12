@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <title>Links&Banners Panel</title>
+
+  <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <!-- modals-->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="quit_icon">
+      <div class="btn-close js--close-modal">x</div>
+      <h4>Do you really want to Quit? </h4>
+      <div class="modal_wrapper">
+        <button class="js--close-modal button__orange">Cancel</button>
+        <button class="js--close-modal button__orange">Quit</button>
+      </div>
+    </div>
+    <div class="modal" id="icon-profile">
+      <div class="btn-close js--close-modal">x</div>
+      <div class="section_header">
+        <h3>Login</h3>
+      </div>
+      <div class="modal_wrapper">
+        <input type=text placeholder="login name">
+        <input type=password placeholder="password">
+        <button class="js--close-modal button__orange">Enter</button>
+      </div>
+    </div>
+    <div class="modal" id="icon-notification">
+      <div class="btn-close js--close-modal">x</div>
+      <div class="section_header">
+        <h3>Online chat with your personal manager</h3>
+      </div>
+      <div class="manager_box">
+        <p>YOUR MANAGER </p>
+        <div class="photo">
+          <img src="./images/pexels-pixabay-220453.jpg" alt="manager" class="photo__manager">
+          <div>
+            <p>Jem Curry</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal_wrapper">
+        <input type="text" placeholder="write your message">
+        <button class="js--close-modal button__orange">Send</button>
+      </div>
+    </div>
+  </div>
+  <!-- hamburger -->
+  <button class="hamburger" id="menu-toggle">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+  <div id="wrapper">
+    <!-- sidebar -->
+    <div id="sidebar-wrapper">
+      <div class="sidebar-nav">
+        <div class="logo"><span>Just do it</span></div>
+        <a href="#general" class="active"><i class="icon-general icon"></i>
+          <span>General</span></a>
+        <a href="#details">
+          <i class="icon-details icon"></i>
+          <span>Details</span></a>
+        <a href="#links">
+          <i class="icon-links icon"></i>
+          <span>Links</span></a>
+        <a href="#banners">
+          <i class="icon-banners icon"></i>
+          <span>Banners</span></a>
+        <a href="personal_data">
+          <i class="icon-personaldata icon"></i>
+          <span>Personal data</span></a>
+        <a href="#payout">
+          <i class="icon-payout icon"></i>
+          <span>Payout</span></a>
+        <a href="postback">
+          <i class="icon-postback icon"></i>
+          <span>Postback</span></a>
+        <hr>
+        <a href="general" class="extra"> <i class="icon-wallet icon"></i><span>$1,500.00
+            <i class="icon-arrow-down-small icon"></i></span></a>
+        <a href="general" class="icon-notification icon extra"> </a>
+        <a href="#general" class="icon-profile icon extra"></a>
+        <a href="#general" class="icon-quit icon extra"></a>
+        <hr>
+        <div class="manager_box">
+          <p>YOUR MANAGER </p>
+          <div class="photo">
+            <img src="./images/pexels-pixabay-220453.jpg" alt="manager" class="photo__manager">
+            <div>
+              <p>Jem Curry</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- top bar -->
+    <div id="topbar-wrapper">
+      <a href="#"> <i class="icon-wallet icon"></i>$1,500.00
+        <i class="icon-arrow-down-small icon"></i></a>
+      <a href="#" id="dot" class="icon-notification icon"></a>
+      <a href="#" class="icon-profile">Leonardo Di Carpatka <i class="icon-arrow-down-small"></i></a>
+      <a href="#" class="icon-quit"></a>
+    </div>
+    <!-- main content -->
+    <div id="page-content-wrapper">
+      <!-- general statistic -->
+      <section class="general_statistic active" id="general">
+        <div class="section_header">
+          <h1>General statistic</h1>
+        </div>
+        <div class="dates_form_wrraper">
+          <input type="date" id="select" class="date_picker">
+          <input type="date" id="pick" class="date_choice">
+          <button class="button__refresh"><i class="icon-refresh icon"></i></button>
+        </div>
+        <div class="table_wrapper">
+          <div class="table">
+            <h3>Visit Signups</h3>
+            <p>124</p>
+          </div>
+          <div class="table">
+            <h3>Net Deposit</h3>
+            <p>564</p>
+          </div>
+          <div class="table">
+            <h3>FTD</h3>445
+          </div>
+          <div class="table">
+            <h3>Turn Over</h3>
+            <p>432</p>
+          </div>
+
+        </div>
+        <div class="chart_statistic_wrapper">
+          <h3>Earning chart</h3>
+        <canvas id="myChart"></canvas>
+        </div>
+      </section>
+      <!-- details -->
+      <section class="details" id="details">
+        <div class="section_header">
+          <h1>Details</h1>
+        </div>
+        <div class="details__wrapper">
+          <div class="dates_form_wrraper">
+            <input type="date" class="date_choice">
+            <input type="date" class="date_choice">
+            <button class="button__refresh"><i class="icon-refresh icon"></i></button>
+          </div>
+          <div class="scroll-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tracker name</th>
+                  <th>Initialed date</th>
+                  <th>Visit</th>
+                  <th>Unique</th>
+                  <th>Signups</th>
+                  <th>FTD</th>
+                  <th>Depositors</th>
+                  <th>Deposits($)</th>
+                  <th>Payouts($)</th>
+                  <th>Turnover</th>
+                  <th>Deal</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- links section -->
+      <section class="links" id="links">
+        <div class="section_header">
+          <h1>Links</h1>
+        </div>
+        <div class="links__wrapper">
+
+          <button type="submit" class="button__orange">+ add new</button>
+          <div class="link_wrapper">
+            <h3>Home page</h3>
+            <a href="#">http://www.homepage.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Currently offer</h3>
+            <a href="#">http://www.currently.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Blurpix</h3>
+            <a href="#">http://www.blurpix.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Your site</h3>
+            <a href="#">http://www.yoursite.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Google</h3>
+            <a href="#">http://www.google.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Facebook</h3>
+            <a href="#">http://www.facebook.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Dashboard</h3>
+            <a href="#">http://www.dashboard.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Blurax</h3>
+            <a href="#">http://www.blurax.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Piece of wine</h3>
+            <a href="#">http://www.pieceofwine.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Twitter</h3>
+            <a href="#">http://www.twitter.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <button type="submit" class="button__orange">+ add new</button>
+        </div>
+      </section>
+      <!-- banners section -->
+      <section class="banners" id="banners">
+        <div class="section_header">
+          <h1>Banners</h1>
+        </div>
+        <div class="links__wrapper">
+
+          <button type="submit" class="button__orange">+ add new</button>
+          <div class="link_wrapper">
+            <h3>Google</h3>
+            <a href="#">http://www.google.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Facebook</h3>
+            <a href="#">http://www.facebook.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Dashboard</h3>
+            <a href="#">http://www.dashboard.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <div class="link_wrapper">
+            <h3>Blurax</h3>
+            <a href="#">http://www.blurax.com</a>
+            <div class="links__icon">
+              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
+            </div>
+          </div>
+          <button type="submit" class="button__orange">+ add new</button>
+        </div>
+      </section>
+      <!-- personal data section -->
+      <section class="personal_data" id="personal_data">
+        <div class="section_header">
+          <h1>Personal data</h1>
+        </div>
+        <form>
+          <div class="personal_data_all_wrapper">
+            <div class="personal_data_wrapper">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="user-name" placeholder="Username">
+              </div>
+              <div class="field">
+                <label>Surname</label>
+                <input type="text" name="user-surnname">
+              </div>
+              <div class="field">
+                <label>E-mail</label>
+                <input type="email" name="e-mail" required>
+              </div>
+              <div class="field">
+                <label>Phone number</label>
+                <input type="tel" name="phon-number">
+              </div>
+            </div>
+            <div class="personal_data_wrapper">
+              <div class="field">
+                <label>Skype</label>
+                <input type="text" name="Skype">
+              </div>
+              <div class="field">
+                <label>ICQ</label>
+                <input type="text" name="ICQ">
+              </div>
+              <div class="field">
+                <label>Man</label>
+                <input type="text" name="Man">
+              </div>
+            </div>
+            <div class="personal_data_wrapper">
+              <div class="field">
+                <label>Wallet</label>
+                <input type="text" name="wallet">
+              </div>
+            </div>
+            <div class="personal_data_wrapper">
+              <div class="field">
+                <label>Password</label>
+                <input type="password" name="Password">
+              </div>
+              <div class="field">
+                <label>Repeat</label>
+                <input type="password" name="Repeat">
+              </div>
+            </div>
+            <button class="button__orange" type="submit">Save</button>
+          </div>
+        </form>
+
+
+      </section>
+      <!-- Payout -->
+      <section class="details" id="payout">
+        <div class="section_header">
+          <h1>Payout</h1>
+        </div>
+        <div class="details__wrapper">
+          <div class="dates_form_wrraper">
+            <input type="date" class="date_choice">
+            <input type="date" class="date_choice">
+            <button class="button__refresh"><i class="icon-refresh icon"></i></button>
+          </div>
+          <div class="scroll-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tracker name</th>
+                  <th>Initialed date</th>
+                  <th>Visit</th>
+                  <th>Unique</th>
+                  <th>Signups</th>
+                  <th>FTD</th>
+                  <th>Depositors</th>
+                  <th>Deposits($)</th>
+                  <th>Payouts($)</th>
+                  <th>Turnover</th>
+                  <th>Deal</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/sam_test</td>
+                  <td>17/04/05 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+                <tr>
+                  <td>aff/leo_test</td>
+                  <td>15/08/02 (12:45)</td>
+                  <td>235</td>
+                  <td>448</td>
+                  <td>84</td>
+                  <td>8</td>
+                  <td>3</td>
+                  <td>34,485.00</td>
+                  <td>485.00</td>
+                  <td>45.00</td>
+                  <td>cpl(200)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- Section Postback -->
+      <section class="details" id="postback">
+        <div class="section_header">
+          <h1>Postback</h1>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
