@@ -5,11 +5,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap"
+    rel="stylesheet">
   <title>Links&Banners Panel</title>
+  <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
+  <!-- hamburger -->
+  <button class="hamburger">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+  <hr>
+
+  <button class="button__orange">Button orange</button>
+
+  <hr>
+  <input type="date" classs="date_picker">
+  <hr>
   <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
   <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
   <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -36,8 +55,6 @@
     <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
   </ol>
 
-  <!-- Jeśli będziemy stylować treść artykułu, to powinniśmy ją testować w ramach grida na dużej liczbie kolumn, lecz jeśli przygotowujemy zawartość sidebara, to lepiej pomyśleć o tym, by ograniczyć nasz testowy grid do 3-4 kolumn. -->
-
   <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -51,25 +68,7 @@
   </div>
 
 
-
-  <!-- hamburger -->
-  <button class="hamburger">
-    <span class="hamburger__box">
-      <span class="hamburger__inner"></span>
-    </span>
-  </button>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function (e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("menuDisplayed")
-    });
-
-  </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i%7cSource+Sans+Pro" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap"
+    rel="stylesheet">
   <title>Links&Banners Panel</title>
 
   <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
@@ -19,8 +22,10 @@
     <div class="modal" id="quit_icon">
       <div class="btn-close js--close-modal">x</div>
       <h4>Do you really want to Quit? </h4>
-      <button class="js--close-modal">Cancel</button>
-      <button class="js--close-modal">Quit</button>
+      <div class="modal_wrapper">
+        <button class="js--close-modal button__orange">Cancel</button>
+        <button class="js--close-modal button__orange">Quit</button>
+      </div>
     </div>
     <div class="modal" id="icon-profile">
       <div class="btn-close js--close-modal">x</div>
@@ -31,6 +36,25 @@
         <input type=text placeholder="login name">
         <input type=password placeholder="password">
         <button class="js--close-modal button__orange">Enter</button>
+      </div>
+    </div>
+    <div class="modal" id="icon-notification">
+      <div class="btn-close js--close-modal">x</div>
+      <div class="section_header">
+        <h3>Online chat with your personal manager</h3>
+      </div>
+      <div class="manager_box">
+        <p>YOUR MANAGER </p>
+        <div class="photo">
+          <img src="./images/pexels-pixabay-220453.jpg" alt="manager" class="photo__manager">
+          <div>
+            <p>Jem Curry</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal_wrapper">
+        <input type="text" placeholder="write your message">
+        <button class="js--close-modal button__orange">Send</button>
       </div>
     </div>
   </div>
@@ -44,7 +68,7 @@
     <!-- sidebar -->
     <div id="sidebar-wrapper">
       <div class="sidebar-nav">
-        <a href="#general"><span>Just do it</span></a>
+        <div class="logo"><span>Just do it</span></div>
         <a href="#general" class="active"><i class="icon-general icon"></i>
           <span>General</span></a>
         <a href="#details">
@@ -66,14 +90,13 @@
           <i class="icon-postback icon"></i>
           <span>Postback</span></a>
         <hr>
-        <a href="#"> <i class="icon-wallet icon"></i><span>$1,500.00
+        <a href="general" class="extra"> <i class="icon-wallet icon"></i><span>$1,500.00
             <i class="icon-arrow-down-small icon"></i></span></a>
-        <a href="#"> <i class="icon-notification icon"></i> </a>
-        <a href="#general" class="icon-profile icon"><span>Leonardo Di Carprio <i
-              class="icon-arrow-down-small"></i></span></a>
-        <a href="#general" class="icon-quit icon"></a>
+        <a href="general" class="icon-notification icon extra"> </a>
+        <a href="#general" class="icon-profile icon extra"></a>
+        <a href="#general" class="icon-quit icon extra"></a>
         <hr>
-        <div id="manager_box">
+        <div class="manager_box">
           <p>YOUR MANAGER </p>
           <div class="photo">
             <img src="./images/pexels-pixabay-220453.jpg" alt="manager" class="photo__manager">
@@ -88,7 +111,7 @@
     <div id="topbar-wrapper">
       <a href="#"> <i class="icon-wallet icon"></i>$1,500.00
         <i class="icon-arrow-down-small icon"></i></a>
-      <a href="#" id="kropka"> <i class="icon-notification icon"></i> </a>
+      <a href="#" id="kropka" class="icon-notification icon"></a>
       <a href="#" class="icon-profile">Leonardo Di Carpatka <i class="icon-arrow-down-small"></i></a>
       <a href="#" class="icon-quit"></a>
     </div>
@@ -101,7 +124,7 @@
         </div>
         <div class="dates_form_wrraper">
           <input type="date" id="select" class="date_picker">
-          <input type="date" id="pick" class="date_picker">
+          <input type="date" id="pick" class="date_choice">
           <button class="button__refresh"><i class="icon-refresh icon"></i></button>
         </div>
         <div class="table_wrapper">
@@ -124,23 +147,6 @@
         </div>
         <div class="chart_statistic_wrapper">
           <h3>Earning chart</h3>
-          <!-- <div class="circle_wrapper">
-            <div class="description_1">
-              <div class="circle_1"></div>
-              <p>Signups</p>
-            </div>
-            <div class="description_2">
-              <div class="circle_2"></div>
-              <p>FTD</p>
-            </div>
-            <div class="description_3">
-              <div class="circle_3"></div>
-              <p>Earned</p>
-            </div>
-          </div> -->
-        </div>
-        <!-- <div class="chart_wrapper"><img src="images/chart.png" alt="chart"></div> -->
-
         <canvas id="myChart"></canvas>
       </section>
       <!-- details -->
@@ -150,8 +156,8 @@
         </div>
         <div class="details__wrapper">
           <div class="dates_form_wrraper">
-            <input type="date" class="select">
-            <input type="date" class="pick">
+            <input type="date" class="date_choice">
+            <input type="date" class="date_choice">
             <button class="button__refresh"><i class="icon-refresh icon"></i></button>
           </div>
           <div class="scroll-wrapper">
@@ -293,7 +299,7 @@
             <a href="#">http://www.homepage.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -301,7 +307,7 @@
             <a href="#">http://www.currently.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -309,7 +315,7 @@
             <a href="#">http://www.blurpix.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -317,7 +323,7 @@
             <a href="#">http://www.yoursite.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -325,7 +331,7 @@
             <a href="#">http://www.google.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -333,7 +339,7 @@
             <a href="#">http://www.facebook.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -341,7 +347,7 @@
             <a href="#">http://www.dashboard.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -349,7 +355,7 @@
             <a href="#">http://www.blurax.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -357,7 +363,7 @@
             <a href="#">http://www.pieceofwine.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -365,7 +371,7 @@
             <a href="#">http://www.twitter.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <button type="submit" class="button__orange">+ add new</button>
@@ -384,7 +390,7 @@
             <a href="#">http://www.google.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -392,7 +398,7 @@
             <a href="#">http://www.facebook.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -400,7 +406,7 @@
             <a href="#">http://www.dashboard.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <div class="link_wrapper">
@@ -408,7 +414,7 @@
             <a href="#">http://www.blurax.com</a>
             <div class="links__icon">
               <i class="icon-links icon"></i>
-              <i class="icon-links icon"></i>
+              <i class="icon-trash icon"></i>
             </div>
           </div>
           <button type="submit" class="button__orange">+ add new</button>
@@ -482,8 +488,8 @@
         </div>
         <div class="details__wrapper">
           <div class="dates_form_wrraper">
-            <input type="date" class="select">
-            <input type="date" class="pick">
+            <input type="date" class="date_choice">
+            <input type="date" class="date_choice">
             <button class="button__refresh"><i class="icon-refresh icon"></i></button>
           </div>
           <div class="scroll-wrapper">
@@ -618,7 +624,6 @@
           <h1>Postback</h1>
         </div>
       </section>
-
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>

@@ -7,8 +7,8 @@
 
 .hamburger {
   outline-style: none;
-  padding-left: 160px;
-  padding-top: 5px;
+  left: 160px;
+  top: 10px;
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -17,7 +17,7 @@
   z-index: 2;
 
   @include mobile {
-    padding-left: 90px;
+    left: 100px;
   }
 
   &__box {
@@ -73,14 +73,20 @@
 }
 
 .hamburger--active {
-  transform: translateX(-160px);
+  transform: translateX(-155px);
 
   @include mobile {
-    transform: translateX(-90px);
-    -webkit-transform: translateX(-90px);
-    -moz-transform: translateX(-90px);
-    -ms-transform: translateX(-90px);
-    -o-transform: translateX(-90px);
+    -webkit-transform: translateX(-155px);
+    -moz-transform: translateX(-155px);
+    -ms-transform: translateX(-155px);
+    -o-transform: translateX(-155px);
   }
 
+  @include mobile {
+    transform: translateX(-93px);
+    -webkit-transform: translateX(-93px);
+    -moz-transform: translateX(-93px);
+    -ms-transform: translateX(-93px);
+    -o-transform: translateX(-93px);
+  }
 }

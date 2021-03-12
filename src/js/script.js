@@ -37,11 +37,8 @@ function initPages() {
     link.addEventListener('click', function (e) {
       const clicedElement = this;
       e.preventDefault();
-      //       // wydobyć id z atrybutu href
       const id = clicedElement.getAttribute('href').replace('#', '');
-      //       // wywołać met z apge z tym id
       activatePage(id);
-      //       // ?? change url hash
       window.location.hash = '#/' + id;
     });
   }
@@ -59,14 +56,12 @@ function activatePage(pageId) {
 activatePage();
 initPages();
 
-
-
 /* modal */
-// prostej funkcji, która zamknie modal poprzez usunięcie klasy show z overlaya.
+
 function closeModal() {
   document.getElementById('overlay').classList.remove('show');
 }
-//Następnie podpinamy ją pod przyciski zamykające z klasą js--close-modal:
+//podpinamy ją pod przyciski zamykające z klasą js--close-modal:
 document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -86,7 +81,6 @@ document.addEventListener('keyup', function (e) {
   }
 });
 
-//otwieranie modala
 
 function openModal(modal) {
   document.querySelectorAll('#overlay > *').forEach(function (modal) {
@@ -110,23 +104,24 @@ for (let quit of icon_profile) {
     openModal('#icon-profile');
   });
 }
+const icon_chat = document.querySelectorAll('.icon-notification');
+for (let quit of icon_chat) {
+  quit.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal('#icon-notification');
+  });
+}
 
 /*canvas*/
 var ctx = document.getElementById('myChart').getContext('2d');
 var Chart = new Chart(ctx, {
-  // 1
   type: 'bar',
   data: {
-    // 2
-    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
-    // 3
+    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
     datasets: [{
-      // 4
       label: 'Signups',
-      // 5
       backgroundColor: '#8DBEC8',
       borderColor: '#8DBEC8',
-      // 6
       data: [250, 200, 250, 300, 400, 350, 230, 190, 180],
     },
     {
@@ -139,9 +134,8 @@ var Chart = new Chart(ctx, {
       label: 'Earned',
       backgroundColor: '#71B374',
       borderColor: '#71B374',
-      data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
-      // 7
-      // hidden: true,
+      data: [59, 49, 68, 90, 67, 41, 13, 38, 48],
+      hidden: true,
     }]
   },
 });

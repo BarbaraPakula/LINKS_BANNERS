@@ -1,7 +1,6 @@
 #sidebar-wrapper {
   z-index: 1;
-  // background-color: $sidebar-background-color;
-  background-color: rgb(59, 57, 57);
+  background-color: $sidebar-background-color;
   position: fixed;
   width: 200px;
   height: 100vh;
@@ -13,38 +12,24 @@
   -ms-transition: transform .5s .5s ease-in-out;
   -o-transition: transform .5s .5s ease-in-out;
 
-  a:nth-child(10) {
-    display: none;
+  .logo {
+    font-size: 25px;
+    font-family: $logo-font;
+    padding: 5px;
+
+    @include mobile {
+      font-size: 22px;
+    }
   }
 
-  a:nth-child(11) {
-    display: none;
-  }
-
-  a:nth-child(12) {
-    display: none;
-  }
-
-  a:nth-child(13) {
+  a.extra {
     display: none;
   }
 
   @include mobile {
     width: 130px;
 
-    a:nth-child(10) {
-      display: flex;
-    }
-
-    a:nth-child(11) {
-      display: flex;
-    }
-
-    a:nth-child(12) {
-      display: flex;
-    }
-
-    a:nth-child(13) {
+    a.extra {
       display: flex;
     }
   }
@@ -52,66 +37,44 @@
 
 #wrapper.menuDisplayed #sidebar-wrapper {
   width: 35px;
+  padding-top: 35px;
   overflow: hidden;
+
+  .logo {
+    display: none;
+  }
 
   a {
     display: inline-block;
-    padding: 5px;
-  }
-
-  a:first-child {
-    margin-top: 20px;
   }
 
   a span {
     display: none;
   }
 
-  #manager_box {
+  .manager_box {
     display: none;
   }
 
-  a:nth-child(10) {
-    display: none;
-  }
-
-  a:nth-child(11) {
-    display: none;
-  }
-
-  a:nth-child(12) {
-    display: none;
-  }
-
-  a:nth-child(13) {
+  a.extra {
     display: none;
   }
 
   @include mobile {
-    a:nth-child(10) {
-      display: flex;
-    }
-
-    a:nth-child(11) {
-      display: flex;
-    }
-
-    a:nth-child(12) {
-      display: flex;
-    }
-
-    a:nth-child(13) {
+    a.extra {
       display: flex;
     }
   }
-
 }
+
 
 .sidebar-nav {
   padding-left: 5px;
+
 }
 
 .sidebar-nav a {
+  min-height: 40px;
   padding: 14px 0;
   display: flex;
   align-items: center;
@@ -120,16 +83,16 @@
 }
 
 .sidebar-nav a:hover {
-  background: $sidebar-background-color1;
+  background: $sidebar-background-color;
   border-left: 5px solid $buttons-color;
   color: $sidebar-font-color;
 }
 
-.sidebar-nav img {
-  margin-right: 20px;
+.sidebar-nav i {
+  padding: 3px;
 }
 
-#manager_box {
+.manager_box {
   margin: 20px auto;
 }
 

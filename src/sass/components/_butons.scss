@@ -13,6 +13,7 @@
 .button__orange {
   @include button;
   width: 120px;
+  margin: 0 2px;
 }
 
 .button__orange:hover {
