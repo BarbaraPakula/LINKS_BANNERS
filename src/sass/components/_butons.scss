@@ -19,6 +19,7 @@
 .button__orange:hover {
   cursor: pointer;
   opacity: 0.85;
+
 }
 
 .button__refresh {
@@ -27,6 +28,7 @@
   min-width: 30px;
   flex-basis: 1;
   flex-shrink: 10;
+
   @include mobile {
     max-width: 10px;
   }
