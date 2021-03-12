@@ -6,11 +6,11 @@
   height: 100vh;
   overflow-y: hidden;
   left: 0;
-  transition: transform .5s .5s ease-in-out;
-  -webkit-transition: transform .5s .5s ease-in-out;
-  -moz-transition: transform .5s .5s ease-in-out;
-  -ms-transition: transform .5s .5s ease-in-out;
-  -o-transition: transform .5s .5s ease-in-out;
+  transition: .2s .2s ease-in-out;
+  -webkit-transition: .2s .2s ease-in-out;
+  -moz-transition: .2s .2s ease-in-out;
+  -ms-transition: .2s .2s ease-in-out;
+  -o-transition: .2s .2s ease-in-out;
 
   .logo {
     font-size: 25px;
@@ -23,6 +23,7 @@
   }
 
   a.extra {
+
     display: none;
   }
 
@@ -130,6 +131,26 @@ div.photo::after {
   position: absolute;
   left: 25px;
   top: 3px;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#sidebar-wrapper a.icon-notification {
+  position: relative;
+}
+
+#sidebar-wrapper a.icon-notification:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $brand-3-color;
+  position: absolute;
+  left: 7px;
+  top: 11px;
   z-index: 100;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
