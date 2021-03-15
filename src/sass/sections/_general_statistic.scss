@@ -47,10 +47,9 @@
   }
 }
 
-.chart_wrapper {
+.chart_statistic_wrapper{
+  padding: 20px 5%;
   display: flex;
-
-  img {
-    width: 100%;
-  }
+  flex-direction: column;
+  border: 1px solid red;
 }

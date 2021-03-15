@@ -2,7 +2,7 @@
   z-index: 1;
   background-color: $sidebar-background-color;
   position: fixed;
-  width: 200px;
+  width: 150px;
   height: 100vh;
   overflow-y: hidden;
   left: 0;
@@ -11,6 +11,38 @@
   -moz-transition: .2s .2s ease-in-out;
   -ms-transition: .2s .2s ease-in-out;
   -o-transition: .2s .2s ease-in-out;
+
+  @include mobile {
+    width: 35px;
+    padding-top: 35px;
+    overflow: hidden;
+
+    .logo {
+      display: none;
+    }
+
+    // a {
+    //   display: inline-block;
+    // }
+
+    a span {
+      display: none;
+    }
+
+    .manager_box {
+      display: none;
+    }
+
+    // a.extra {
+    //   display: none;
+    // }
+
+    // @include mobile {
+    //   a.extra {
+    //     display: flex;
+    //   }
+    // }
+  }
 
   .logo {
     font-size: 25px;
@@ -28,8 +60,6 @@
   }
 
   @include mobile {
-    width: 130px;
-
     a.extra {
       display: flex;
     }
@@ -40,9 +70,16 @@
   width: 35px;
   padding-top: 35px;
   overflow: hidden;
+  @include mobile {
+    padding-top: 0;
+    width: 150px;
+  }
 
   .logo {
     display: none;
+    @include mobile {
+      display: flex;
+    }
   }
 
   a {
@@ -51,10 +88,16 @@
 
   a span {
     display: none;
+    @include mobile {
+      display: inline;
+    }
   }
 
   .manager_box {
     display: none;
+    @include mobile {
+      display: inline;
+    }
   }
 
   a.extra {
@@ -126,16 +169,12 @@ div.photo::after {
   content: "";
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   background: $brand-3-color;
   position: absolute;
   left: 25px;
   top: 3px;
   z-index: 100;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
 #sidebar-wrapper a.icon-notification {
@@ -146,14 +185,10 @@ div.photo::after {
   content: "";
   width: 7px;
   height: 7px;
-  border-radius: 50%;
   background: $brand-3-color;
   position: absolute;
   left: 7px;
   top: 11px;
   z-index: 100;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 50%;
 }

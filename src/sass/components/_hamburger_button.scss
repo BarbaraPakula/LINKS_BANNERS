@@ -7,7 +7,7 @@
 
 .hamburger {
   outline-style: none;
-  left: 160px;
+  left: 120px;
   top: 10px;
   cursor: pointer;
   background-color: transparent;
@@ -20,9 +20,8 @@
   -moz-transition: .2s .2s ease-in-out;
   -ms-transition: .2s .2s ease-in-out;
   -o-transition: .2s .2s ease-in-out;
-
   @include mobile {
-    left: 100px;
+    transform: translateX(-115px);
   }
 
   &__box {
@@ -47,6 +46,29 @@
   }
 }
 
+
+.hamburger--active {
+  transform: translateX(-115px);
+  transition: .2s .2s ease-in-out;
+  -webkit-transition: .2s .2s ease-in-out;
+  -moz-transition: .2s .2s ease-in-out;
+  -ms-transition: .2s .2s ease-in-out;
+  -o-transition: .2s .2s ease-in-out;
+  -webkit-transform: translateX(-115px);
+  -moz-transform: translateX(-115px);
+  -ms-transform: translateX(-115px);
+  -o-transform: translateX(-115px);
+  @include mobile{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+
+
 .hamburger__inner::before,
 .hamburger__inner::after {
   @include hamburger-line;
@@ -68,21 +90,4 @@
 
 .hamburger--active .hamburger__inner::after {
   background-color: $font-color;
-}
-
-.hamburger--active {
-  transform: translateX(-155px);
-  transition: .2s .2s ease-in-out;
-  -webkit-transition: .2s .2s ease-in-out;
-  -moz-transition: .2s .2s ease-in-out;
-  -ms-transition: .2s .2s ease-in-out;
-  -o-transition: .2s .2s ease-in-out;
-
-  @include mobile {
-    transform: translateX(-93px);
-    -webkit-transform: translateX(-93px);
-    -moz-transform: translateX(-93px);
-    -ms-transform: translateX(-93px);
-    -o-transform: translateX(-93px);
-  }
 }
