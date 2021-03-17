@@ -3,12 +3,16 @@
   margin-top: 5px;
 
   &__wrapper {
-    padding: 20px 10%;
+    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: $sidebar-font-color;
+
+    button {
+      margin-top: 20px;
+    }
   }
 
   .link_wrapper {
@@ -56,10 +60,10 @@
 
   .link_wrapper:hover {
     background-color: $background-basic-color;
+    cursor: pointer;
 
     .links__icon {
       visibility: visible;
-      cursor: pointer;
     }
 
     i:hover {

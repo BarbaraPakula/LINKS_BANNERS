@@ -2,6 +2,10 @@
   background: $icon-color;
   margin-top: 5px;
 
+  button {
+    margin-top: 20px;
+  }
+
   &__wrapper {
     padding: 20px 10%;
     display: flex;
@@ -55,10 +59,10 @@
 
   .link_wrapper:hover {
     background-color: $background-basic-color;
+    cursor: pointer;
 
     .links__icon {
       visibility: visible;
-      cursor: pointer;
     }
 
     i:hover {

@@ -70,6 +70,7 @@
   width: 35px;
   padding-top: 35px;
   overflow: hidden;
+
   @include mobile {
     padding-top: 0;
     width: 150px;
@@ -77,6 +78,7 @@
 
   .logo {
     display: none;
+
     @include mobile {
       display: flex;
     }
@@ -88,6 +90,7 @@
 
   a span {
     display: none;
+
     @include mobile {
       display: inline;
     }
@@ -95,6 +98,7 @@
 
   .manager_box {
     display: none;
+
     @include mobile {
       display: inline;
     }
@@ -149,6 +153,7 @@
   font-style: italic;
 
   p {
+    padding-left: 10px;
     color: rgb(73, 95, 197);
   }
 }

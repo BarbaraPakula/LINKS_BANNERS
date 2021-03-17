@@ -2,16 +2,15 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 35px;
+  height: 40px;
   position: fixed;
   left: -15px;
   width: 100vw;
   background-color: $sidebar-font-color;
 
   a {
-    height: 35px;
+    padding: 10px;
     text-decoration: none;
-    padding: 10px 15px;
     border-left: 2px solid $background-basic-color;
     transition: all 2s;
     -webkit-transition: all 2s;
@@ -20,24 +19,23 @@
     -o-transition: all 2s;
   }
 
+  i {
+    padding: 5px;
+  }
+
   @include mobile {
     display: none;
   }
 
 }
 
+i:hover {
+  color: $buttons-color;
+}
+
 a:hover {
   background-color: $background-basic-color;
   border: none;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-
-  i {
-    color: $buttons-color;
-  }
 }
 
 #dot {
@@ -51,6 +49,6 @@ a#dot::after {
   border-radius: 50%;
   background: $brand-3-color;
   position: absolute;
-  left: 22px;
+  left: 18px;
   z-index: 100;
 }

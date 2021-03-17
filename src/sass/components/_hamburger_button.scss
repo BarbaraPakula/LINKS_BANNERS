@@ -20,6 +20,7 @@
   -moz-transition: .2s .2s ease-in-out;
   -ms-transition: .2s .2s ease-in-out;
   -o-transition: .2s .2s ease-in-out;
+
   @include mobile {
     transform: translateX(-115px);
   }
@@ -46,7 +47,6 @@
   }
 }
 
-
 .hamburger--active {
   transform: translateX(-115px);
   transition: .2s .2s ease-in-out;
@@ -58,16 +58,15 @@
   -moz-transform: translateX(-115px);
   -ms-transform: translateX(-115px);
   -o-transform: translateX(-115px);
-  @include mobile{
+
+  @include mobile {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
+  }
 }
-}
-
-
 
 .hamburger__inner::before,
 .hamburger__inner::after {

@@ -4,10 +4,13 @@
   background: $sidebar-font-color;
 
   .dates_form_wrraper {
-
     padding: 20px 20%;
     display: flex;
     justify-content: center;
+
+    button {
+      margin: 0 5px;
+    }
 
     input {
       border-style: none;
@@ -19,7 +22,6 @@
         display: none;
       }
     }
-
 
     @include mobile {
       flex-direction: column;
@@ -47,9 +49,17 @@
   }
 }
 
-.chart_statistic_wrapper{
+.chart_statistic_wrapper {
   padding: 20px 5%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+
+  canvas {
+    margin: 0 auto;
+    max-width: 80%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
 }

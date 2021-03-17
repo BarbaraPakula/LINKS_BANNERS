@@ -68,9 +68,9 @@ a {
   }
 
   .modal_wrapper {
-    padding: 10%;
+    padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     .modal_wrapper>buttons {
       background-color: $buttons-color;
@@ -89,4 +89,14 @@ a {
   top: 0;
   right: 0;
   padding: 5px 10px;
+}
+
+.message {
+  i {
+    padding-right: 5px;
+  }
+
+  input {
+    border: none;
+  }
 }

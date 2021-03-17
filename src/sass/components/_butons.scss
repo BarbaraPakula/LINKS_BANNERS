@@ -1,8 +1,13 @@
 @mixin button {
   border: none;
   color: $sidebar-font-color;
-  border-radius:4px;
-  padding: 3px;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .button__orange {

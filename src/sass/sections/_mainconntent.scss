@@ -7,7 +7,7 @@
   -ms-transition: .2s .2s ease-in-out;
   -o-transition: .2s .2s ease-in-out;
 
-  @include mobile{
+  @include mobile {
     padding-left: 35px;
     padding-top: 5px;
   }
@@ -23,8 +23,8 @@
 
 #wrapper.menuDisplayed #page-content-wrapper {
   padding-left: 35px;
-  @include mobile{
+
+  @include mobile {
     padding-left: 150px;
   }
 }
-
